@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DnD Next session</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+<ul>
+  <li><a class = "active" href="index.html">Home</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="set_timer.html">Set Next Session</a></li>
+</ul>
+
+   <div id="main_logo">
+     <h1>Welcome into the world of DnD</h1>
+     <img  src="dnd_main.jpeg" width="150" height="150">
+    </div>
+
+    <div id="elturell">
+      <p>Elturel</p>
+      <div id = character_art_div>
+      <p id="character_art"><img src="tevoss.png" alt="tevoss"></p>
+      <p id="character_art"><img src="bartom.png" alt="bartom"></p>
+      <p id="character_art"><img src="tigs.png" alt="tigs"></p>
+      <p id="character_art"><img src="sarah.png" alt="sarah"></p>
+      <p id="character_art"><img src="edel.png" alt="edel"></p>
+      <p id="character_art"><img src="savin.png" alt="savin"></p>
+      <p id="character_art"><img src="iuzakor.png" alt="iuzakor"></p>
+      <p id="character_art"><img src="zeril.png" alt="zeril"></p>
+      </div>
+      <div id="elturell_timer">
+        <p >Time until next session :  </p> 
+        <p  id ="date"></p>
+        <div id="character_art_div">
+        <p id="character_art"><img src="tevoss.png" alt="tevoss"></p>
+        <p id="character_art"><img src="bartom.png" alt="bartom"></p>
+        <p id="character_art"><img src="tigs.png" alt="tigs"></p>
+        <p id="character_art"><img src="sarah.png" alt="sarah"></p>
+        </div>
+      </div>
+    </div>
+
+   
+   
+    <div id="witchlight">
+      <h2>Witchlight</h2>
+      <div id="witchlight_timer">
+        <p >Time until next session :  </p> 
+        <p  id ="date2"></p>
+      </div>
+    </div>
+  
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("date").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("date").innerHTML = "Dnd Time !!";
+  }
+}, 1000);
+
+// Set the date we're counting down to
+var countDownDate2 = new Date("Dec 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate2 - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("date2").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("date2").innerHTML = "Dnd Time !!";
+  }
+}, 1000);
+
+</script>
+  </body>
+</html>
+
