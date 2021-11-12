@@ -36,7 +36,7 @@
         <div id="character_art_div">
         <p id="character_art"><img src="tevoss.png" alt="tevoss"></p>
         <p id="character_art"><img src="bartom.png" alt="bartom"></p>
-        <p id="character_art"><img src="tigs.png" alt="tigs"></p>
+        <p id="character_art"><img id="imgClickAndChange" src="tigs.png" style="width: 75px; height: 75px;" onclick = "changeImage()" usemap="" alt=""></p>
         <p id="character_art"><img src="sarah.png" alt="sarah"></p>
         </div>
       </div>
@@ -112,6 +112,19 @@ var x = setInterval(function() {
     document.getElementById("date2").innerHTML = "Dnd Time !!";
   }
 }, 1000);
+
+var counter = 1;
+
+imgClickAndChange.onclick = function(){
+    if(counter == 0){
+        document.getElementById("imgClickAndChange").src = "tigs.png";
+        counter++;
+    }
+    else if(counter == 1){
+        document.getElementById("imgClickAndChange").src = "tigs2.png";
+        counter = 0;
+    }
+};
 
 </script>
   </body>
