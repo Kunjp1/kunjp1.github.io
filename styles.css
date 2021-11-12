@@ -137,3 +137,35 @@ li a:hover:not(.active) {
   display: inline-block;
   padding: 0;
 }
+.outer_timer_wrapper{
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.inner_timer_wrapper{
+  display: flex;
+   flex-direction: row;
+   width: 400vw;
+   transform: rotate(90deg) translateY(-100vh);
+   transform-origin: top left;
+}
+.timer {
+  width: 100vw;
+  height: 100vh;
+}
+.one{
+  background-image: url("countdown_page_1.png");
+}
+.two {
+  background-image: url("countdown_page_2.png");
+}
