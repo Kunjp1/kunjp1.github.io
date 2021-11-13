@@ -1,5 +1,7 @@
 body {
   background-color: gray;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   color: black;
@@ -7,31 +9,35 @@ h1 {
 p {
   color:black;
 }
-ul{
+.nav_bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav_bar ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: darkmagenta;
-}
-ul li {
+  background-color: darkmagenta;}
+.nav_bar ul li {
   display: inline;
   float: left;
 }
-li a {
+.nav_bar li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-li a:hover {
+.nav_bar li a:hover {
   background-color: #111;
 }
-li a:hover:not(.active) {
+.nav_bar li a:hover:not(.active) {
   background-color: #111;
 }
-.active {
+.nav_bar .active {
   background-color: #04AA6D;
 }
 #main_logo {
@@ -148,6 +154,8 @@ li a:hover:not(.active) {
   scrollbar-width: none;
   -ms-overflow-style: none;
   margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -155,17 +163,21 @@ li a:hover:not(.active) {
 .inner_timer_wrapper{
   display: flex;
    flex-direction: row;
-   width: 400vw;
+   width: 200vw;
    transform: rotate(90deg) translateY(-100vh);
    transform-origin: top left;
 }
 .timer {
   width: 100vw;
   height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 .one{
   background-image: url("countdown_page_1.png");
+  scroll-snap-align: start;
 }
 .two {
   background-image: url("countdown_page_2.png");
+  scroll-snap-align: start;
 }
